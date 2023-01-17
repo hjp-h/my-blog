@@ -1,0 +1,29 @@
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.NavBar{
+  background-color: black;
+  height: 60px;
+  display: flex;
+  padding: 0 50px;
+  justify-content: space-between;
+  &Logo{
+    font-size: 20px;
+    color:white;
+    font-weight: bolder;
+    width: 100px;
+    @include flex-center;
+  }
+  &Link{
+    @include flex-center;
+    width: 200px;
+    justify-content: space-between;
+  }
+  &Operate{
+    width: 150px;
+    @include flex-center;
+    justify-content: space-between;
+  }
+}
