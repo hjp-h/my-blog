@@ -7,9 +7,8 @@ import { Button, message } from 'antd'
 import { CommonObject } from '@/types/common'
 import CountDown from '../CountDown'
 // service
-// import {getVerifyCode} from '@/service/modules/Login/index.service'
-// import jpRequest from "@/service";
-// const {post} = jpRequest;
+import {getVerifyCode} from '@/service/modules/Login/index.service'
+
 const Login = React.forwardRef<any,CommonObject>((props,ref) => {
   // 控制显示与隐藏
   const [isShowLogin,setIsShowLogin] = useState<boolean>(false);
@@ -28,10 +27,7 @@ const Login = React.forwardRef<any,CommonObject>((props,ref) => {
       return;
     }
     setIsShowCountDown(true);
-    // getVerifyCode({})
-    // post("/api/user/sendVerifyCode")
-
-
+    getVerifyCode({})
   }
   const handleCountEnd = () => {
     setIsShowCountDown(false);

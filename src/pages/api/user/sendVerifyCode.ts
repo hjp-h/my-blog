@@ -1,4 +1,5 @@
-export default async function (req:any,res:any) {
+import type { NextApiRequest,NextApiResponse } from "next"
+export default async function (req:NextApiRequest,res:NextApiResponse) {
   console.log(111)
   res.status(200).json({
     code:1,
